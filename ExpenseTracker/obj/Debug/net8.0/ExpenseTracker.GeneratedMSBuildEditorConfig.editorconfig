@@ -26,20 +26,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9DcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9EZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9EZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9FZGl0LmNzaHRtbA==
+[/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/AddOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9BZGRPckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/vlad/RiderProjects/ExpenseTracker/ExpenseTracker/Views/Categories/Index.cshtml]

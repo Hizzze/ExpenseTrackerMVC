@@ -12,4 +12,11 @@ public class Category
 
     [Column(TypeName = "varchar(5)")] public string Icon { get; set; } = string.Empty;
     [Column(TypeName = "varchar(10)")] public string Type { get; set; } = "Expense";
+    [NotMapped]
+    public string? TitleWithIcon {
+        get
+        {
+            return this.Icon + " " + this.Title;
+        } 
+    }
 }
