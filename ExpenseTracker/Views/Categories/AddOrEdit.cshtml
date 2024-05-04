@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-md-7">
         <div class="widget p-5">
-            <form asp-action="AddOrEdit">
+            <form asp-action="AddOrEdit" id="form-element">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" name="CategoryId" value="@Model.CategoryId">
                 <div class="mb-3">
@@ -22,12 +22,14 @@
                     </div>
                 </div>
                 <div class="mb-3">
+                    <label for="Title"></label>
                     <ejs-textbox id="title" name="Title" placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <span asp-validation-for="Title" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
+                    <label for="Icon"></label>
                     <ejs-textbox id="icon" name="Icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Icon" class="text-danger"></span>
+                    <span asp-validation-for="Icon" class="text-danger fs-6"></span>
                 </div>
             
                 <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
@@ -43,6 +45,27 @@
 </div>
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+<script>
+    // sets required property in the FormValidator rules collection
+    var options = {
+        rules: {
+            'Title': { required: [true, "Please enter Title" ] },
+            'Icon': { required: [true, "Please enter Icon" ] },
+        },
+    };
+
+    var formObject = new ej.inputs.FormValidator('#form-element', options);
+
+    // Places error label outside the TextBox using the customPlacement event of FormValidator
+    formObject.customPlacement = function (element, errorElement) {
+        element.parentElement.parentElement.appendChild(errorElement);
+        
+    };
+    
+    // Form validates the input values using validate method of FormValidator
+    document.getElementById("submit").addEventListener('click', function () {
+        formObject.validate();
+    });
+
+   
+</script>
